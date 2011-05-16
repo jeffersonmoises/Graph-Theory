@@ -1,0 +1,30 @@
+\quest{9.1.5}
+
+Seja $G$, 2-conexo e com $n \ge 3$, e $C$ o ciclo mais longo em $G$.
+Sabemos que $v(C) \ge 3$ pois $n\ge 3$, senão não seria 2-conexo. 
+Seja $e = xy \in E(C)$ a aresta considerada que será contraída 
+e denote por $v_{xy}$ o vértice correspondente em $G-e$. 
+
+Se $e\in E(C)$, sabemos que $G-e$  mantém 2 caminhos disjuntos $\forall v,v' \in V(C)$, 
+pois basta  utilizar $v{xy}$ para manter um caminho que passava por $e$. 
+
+Logo, basta considerar os casos onde $v$ ou $v'$ não pertencem ao ciclo $C$. 
+Sem perda de generalidade, considere $v \in V(C)$ e $v' \notin V(C)$.
+Sejam $P$ e $P'$ dois $v'v$-caminhos internamente disjuntos em $G$.
+Se nenhum dos caminhos utiliza $x$ ou $y$, então o resultado segue, pois
+os caminhos continuam presentes em $G-e$, Se utilizam apenas um dos dois 
+($x$ ou $y$) o resultado também segue, bastando apenas utilizar $v_{xy}$
+em $G-e$. Se os dois vértices são utilizados no mesmo caminho, sem perda de generalidae $e$ pertence a este caminho ($P$ ou $P'$),
+então basta utilizar $v_{xy}$ em $G-e$. Por fim, sem perda de generalidade considere que $x \in P$ e $y \in P'$, 
+então o ciclo $C' = v'Px{C-e}yPv'$ é um ciclo em $G$ com tamanho $e(C) = e(P) + e(C - e) + e(P') \ge 1 + e(C) - 1 + 1 = e(C) + 1$
+o que contraria a nossa hipótese de que $C$ é o maior ciclo em $G$.
+
+Por fim, falta considerar o caso em que $v,v' \notin V(G)$. 
+Se no máximo um dos caminhos ($P$ ou $P'$) utilizam vértices de
+$C$ então os caminhos continuam existindo em $G-e$, substituindo-se
+$v$ e $y$ por $v_{xy}$. Considere então que os dois caminhos encontram vértices
+de $C$. Se $x$ e $y$ pertencem ao mesmo caminho então o resultado segue como nos casos anteriores.
+Caso contrário, temos novamente a mesma contradição com o ciclo $C'$.
+
+\fimprova
+

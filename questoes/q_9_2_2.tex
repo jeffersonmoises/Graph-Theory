@@ -1,0 +1,28 @@
+\quest{9.2.2}
+
+{\bf FALTA O CASO DO $v$ PERTENCER AO CICLO C, NÃO LEMBRO COMO FICOU! :P}\\
+
+
+Assumiremos que $G$ é {\it loopless} (Corrigindo a questão) e que não
+possui arestas multiplas pois isto não diminui a quantidade de caminhos disjuntos entre
+dois vértices não adjacentes.
+
+Como $G$ é 3-conexo e não vazio, temos que $v(G) \ge 4$. Além disto, como é não bipartido,
+temos que contém um ciclo ímpar $C$ com $e(C) \ge 3$ ({\it loopless}).
+Sejam $S =\{x,y,z\} \subseteq V(C)$ e $v \in V(G)\setminus V(C)$. Como $G$ é 3-conexo temos um $3$-{\it fan}
+de $v$ para $S$ em $G$.
+
+Sejam $P_{vx}$, $P_{vy}$ e $P_{vz}$ os três caminhos disjuntos do $3$-{\it fan} de $v$ para os respectivos
+vértices de $S$. Mostraremos como construir três ciclos ímpares utilizando estes caminhos e o ciclo $C$, e isto
+basta para provar os $4$ ciclos ímpares em $G$ (contabilizando $C$ como um dos $4$).
+
+Primeiramente considere os caminhos $P_{vx}$ e $P_{vy}$. Seja $x'$ o primeiro vértice do caminho $P_{vx}$ que pertence a $C$
+e $y'$ o análogo para $P_{vy}$. Sabemos que estes vértices existem pois $v,y \in V(C)$. Considere então $P'_{vx'} = vP_{vx}x'$ e
+$P'_{vy'} = vP_{vy}y'$. Temos que $v',y' \in V(C)$ e, além disto que $v(C)$ é ímpar, logo existem dois $x'y'$-caminhos, um de 
+tamanho par ($P_{x'y'}$) e outro de tamanho ímpar ($I_{x'y'}$), utilizando vértices de $C$.
+Suponha que $P'_{vx'} \cup P'_{vy'}$ tem tamanho par, então $P'_{vx'} \cup P'_{vy'} \cup I_{x'y'}$ é um ciclo de tamanho ímpar em $G$.
+Caso contrário, se $P'_{vx'} \cup P'_{vy'}$ tem tamanho ímpar, então $P'_{vx'} \cup P'_{vy'} \cup P_{x'y'}$ é um ciclo de tamanho ímpar em $G$.
+
+Podemos usar este mesmo argurmento para os pares de caminhos ($P_{vx}$ e $P_{vz}$) e ($P_{vz}$ e $P_{vy}$), formando assim mais dois ciclos ímpares.
+\fimprova
+
